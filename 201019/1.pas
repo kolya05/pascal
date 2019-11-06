@@ -1,12 +1,15 @@
-﻿program shit;
-var
-  age, x: integer;
-  
+﻿var
+  age, d: integer;
 begin
-  writeln ('Введите возраст');
-  readln(age);
-  x:= age mod 10;
-  if x = 1 then write(age, ' год');
-  if (x >= 2) and (x <= 4) then write (age, ' года');
-  if (x = 0) or (x >= 5)  and (x <= 9) then write (age, ' лет');
+  read(age);
+  if ((age >= 11) and (age <= 19)) or ((age >= 111) and (age <= 119)) 
+  then 
+    write(age, ' лет')
+  else
+  begin
+    d := age mod 10;
+    if (d = 1) then write(age, ' год');
+    if (d >= 2) and (d <= 4) then write(age, ' года');
+    if (d = 0) or ((d >= 5) and (d <= 9)) then write(age, ' лет');
+  end;
 end.
